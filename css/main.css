@@ -15,3 +15,33 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
+
+#left-ear {
+  transition: all 500ms linear;
+}
+
+#bear:hover #left-ear {
+  transform: translate(0px, -10px);
+}
+
+#right-ear {
+  transition: all 500ms linear;
+}
+
+#bear:hover #right-ear {
+  transform: translate(0px, -10px);
+}
+
+@keyframes slide {
+  from {
+    transform: translate(10px, 0px);
+  }
+
+  to {
+    transform: translate(-10px, 0px);
+  }
+}
+
+.left-eye,
+.right-eye {
+  animation: slide 1s linear infinite alternate;
